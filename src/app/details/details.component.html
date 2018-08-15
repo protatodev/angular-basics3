@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h1>App Details</h1>
+      <button class="btn btn-primary" (click)="addClick()">Display Details</button>
+      <p *ngIf="clicked">I love Cinnamon Toast Crunch!</p>
+      <hr>
+      <div *ngFor="let date of dateArray; let i = index" [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}" [ngClass]="{'whiteFive': i >= 4}">{{ date }}</div>
+
+    </div>
+  </div>
+</div>
